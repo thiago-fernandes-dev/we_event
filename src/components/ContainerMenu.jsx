@@ -2,22 +2,33 @@ import React from "react";
 
 export function ContainerMenu(){
     return (
-        <section className="container-menu">
-            <div className="espaco-linha-menu-start"></div>
-            <img id="wewent-img" src="./assets/icons/Logo.svg" alt="Logo WE EVENT"/>
-            <a href="#" id="todos-eventos-link"><img id="eventos-img" src="./assets/icons/Eventos.svg"
-                                                     alt="Todos os Eventos"/></a>
-            <div id="pesquisar" className="barra-pesquisa">
-                <input type="text" placeholder="Buscar artistas e eventos" className="input-pesquisa"/>
-                <button className="botao-pesquisar"><img src="./assets/icons/Search.svg" alt="Pesquisar"/></button>
+        <section className="bg-[#1E2665]">
+            <div className="w-full py-3"></div>
+            <div className="inline-flex space-x-10 w-full">
+                <div className="w-1/28"></div>
+                <img id="wewent-img" src="src/assets/Logo.svg" alt="Logo WE EVENT"/>
+                <a href="#" id="todos-eventos-link"><img id="eventos-img" src="src/assets/Eventos.svg" alt="Todos os Eventos"/></a>
+
+                <form className="w-1/3">
+                    <div className="flex w-full">
+                        <div className="relative w-full">
+                            <input type="search" id="search-dropdown" className="block p-2.5 w-full z-20 text-base rounded-2xl py-4 text-gray-900 bg-gray-50  focus:ring-blue-500 focus:border-blue-500 dark:bg-white dark:border-s-gray-700  dark:border-gray-600 dark:placeholder-gray-400  " placeholder="Buscar eventos" required/>
+                            <button type="submit" className="absolute top-0 end-0 p-5 text-sm font-medium h-full text-gray-400 bg-white rounded-2xl  hover:bg-gray-50 focus:ring-1 focus:outline-none  ">
+                                <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                                </svg>
+                                <span className="sr-only">Search</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <a href="" className="content-center"><img src="src/assets/Login.svg" alt="Login "/></a>
+                <a href="" className="content-center"><img src="src/assets/Favoritos.svg" alt="Seus Favoritos"/></a>
+                <a href="" className="content-center"><img src="src/assets/Linguagem.svg" alt="Mudar Linguagem"/></a>
+                <div className="w-1/28"></div>
             </div>
-            <div className="funcionalidades">
-                <ul className="funcionalidades-list">
-                    <li><a href=""><img src="./assets/icons/Login.svg" alt="Login"/></a></li>
-                    <li><a href=""><img src="./assets/icons/Favoritos.svg" alt="Seus Favoritos"/></a></li>
-                    <li><a href=""><img src="./assets/icons/Linguagem.svg" alt="Mudar Linguagem"/></a></li>
-                </ul>
-            </div>
+            <div className="w-full py-3"></div>
         </section>
     )
 }
