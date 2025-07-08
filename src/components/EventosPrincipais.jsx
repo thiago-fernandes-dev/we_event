@@ -90,18 +90,18 @@ export function EventosPrincipais(){
                 </div>
 
                 <div id="animation-carousel" className="relative w-1/2" data-carousel="slide">
-                    <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-                        <div id="carousel-item-1" className=" duration-200 ease-linear" data-carousel-item>
-                            <img src="src/assets/event_main_carrosel_1.png" className=" object-contain" alt="..."/>
+                    <div className="relative h-full overflow-clip rounded-lg md:h-full">
+                        <div id="carousel-item-1" className=" object-cover w-full   duration-200 ease-linear" data-carousel-item>
+                            <img src="src/assets/event_main_carrosel_1.png" className="  object-cover w-full h-full" alt="..."/>
                         </div>
-                        <div id="carousel-item-2" className=" duration-200 ease-linear" data-carousel-item>
-                            <img src="src/assets/event_main_carrosel_2.png" className="object-contain" alt="..."/>
+                        <div id="carousel-item-2" className=" object-cover w-full  duration-200 ease-linear" data-carousel-item>
+                            <img src="src/assets/event_main_carrosel_2.png" className=" object-cover   w-full h-full " alt="..."/>
                         </div>
-                        <div id="carousel-item-3" className=" duration-200 ease-linear" data-carousel-item="active">
-                            <img src="src/assets/event_main_carrosel_3.png" className="object-contain" alt="..."/>
+                        <div id="carousel-item-3" className="object-cover w-full  duration-200 ease-linear" data-carousel-item="active">
+                            <img src="src/assets/event_main_carrosel_3.png" className="  object-cover w-full h-full " alt="..."/>
                         </div>
-                        <div id="carousel-item-4" className=" duration-200 ease-linear" data-carousel-item>
-                            <img src="src/assets/BeeGees.jpeg" className="object-contain" alt="..."/>
+                        <div id="carousel-item-4" className=" object-cover w-full duration-200 ease-linear" data-carousel-item>
+                            <img src="src/assets/BeeGees.jpeg" className="object-cover  w-full h-full " alt="..."/>
                         </div>
                     </div>
                     <button onClick={() => {
