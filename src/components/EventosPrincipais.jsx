@@ -82,14 +82,14 @@ export function EventosPrincipais(){
     }
 
     return (
-        <section className="inline-flex w-full max-h-1/4">
-            <div className="flex w-full">
+        <section className="inline-flex w-full max-h-1/4 m-0">
+            <div className="flex w-full m-0">
                 <div className="inline-flex w-1/2">
                     <a href="#" className="w-1/2"><img id="evento1-img" src="src/assets/event_main_1.png" alt="#" className="w-full h-full"/></a>
                     <a href="#" className="w-1/2"><img id="evento2-img" src="src/assets/event_main_2.png" alt="#" className="w-full h-full"/></a>
                 </div>
 
-                <div id="animation-carousel" className="relative w-1/2" data-carousel="slide">
+                <div id="animation-carousel" className="relative w-1/2 m-0" data-carousel="slide">
                     <div className="relative h-full overflow-clip rounded-lg md:h-full">
                         <div id="carousel-item-1" className=" object-cover w-full   duration-200 ease-linear" data-carousel-item>
                             <img src="src/assets/event_main_carrosel_1.png" className="  object-cover w-full h-full" alt="..."/>
@@ -125,7 +125,6 @@ export function EventosPrincipais(){
                         </span>
                     </button>
                 </div>
-
             </div>
         </section>
     )
