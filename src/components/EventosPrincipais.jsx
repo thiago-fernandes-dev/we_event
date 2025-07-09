@@ -1,85 +1,16 @@
 import React from "react";
-import { Carousel } from 'flowbite';
-import {document} from "postcss";
+import { Carousel, IconButton } from "@material-tailwind/react";
 
 export function EventosPrincipais(){
-    let carousel = "placeholder"
+    //let carousel = "placeholder";
     const praFrente = () =>{
-        const carouselHTML = document.getElementById('animation-carousel');
-
-        const items = [
-            {
-                position: 0,
-                el: document.getElementById('carousel-item-1'),
-            },
-            {
-                position: 1,
-                el: document.getElementById('carousel-item-2'),
-            },
-            {
-                position: 2,
-                el: document.getElementById('carousel-item-3'),
-            },
-            {
-                position: 3,
-                el: document.getElementById('carousel-item-4'),
-            },
-        ];
-
-        const options = {
-            defaultPosition: 1,
-            interval: 2000,
-
-        };
-
-        const instanceOptions = {
-            id: 'animation-carousel',
-            override: false
-        };
-        if(carousel === "placeholder"){
-            carousel = new Carousel(carouselHTML, items, options,instanceOptions);
-            console.log("criou novo carousel");
-        }
-        carousel.next();
-    }
+        const carouselHTML = document.getElementById('controls-carousel');
+        carouselHTML.next();
+    };
     const praTras = () =>{
-        let carouselHTML = document.getElementById('animation-carousel');
-
-        const items = [
-            {
-                position: 0,
-                el: document.getElementById('carousel-item-1'),
-            },
-            {
-                position: 1,
-                el: document.getElementById('carousel-item-2'),
-            },
-            {
-                position: 2,
-                el: document.getElementById('carousel-item-3'),
-            },
-            {
-                position: 3,
-                el: document.getElementById('carousel-item-4'),
-            },
-        ];
-
-        const options = {
-            defaultPosition: 1,
-            interval: 2000,
-
-        };
-
-        const instanceOptions = {
-            id: 'animation-carousel',
-            override: false
-        };
-        if(carousel === "placeholder"){
-            carousel = new Carousel(carouselHTML, items,options, instanceOptions);
-            console.log("criou novo carousel");
-        }
-        carousel.prev();
-    }
+        let carouselHTML = document.getElementById('controls-carousel');
+        carouselHTML.prev();
+    };
 
     return (
         <section className="inline-flex w-full max-h-1/4 m-0">
@@ -89,42 +20,84 @@ export function EventosPrincipais(){
                     <a href="#" className="w-1/2"><img id="evento2-img" src="src/assets/event_main_2.png" alt="#" className="w-full h-full"/></a>
                 </div>
 
-                <div id="animation-carousel" className="relative w-1/2 m-0" data-carousel="slide">
-                    <div className="relative h-full overflow-clip rounded-lg md:h-full">
-                        <div id="carousel-item-1" className=" object-cover w-full   duration-200 ease-linear" data-carousel-item>
-                            <img src="src/assets/event_main_carrosel_1.png" className="  object-cover w-full h-full" alt="..."/>
-                        </div>
-                        <div id="carousel-item-2" className=" object-cover w-full  duration-200 ease-linear" data-carousel-item>
-                            <img src="src/assets/event_main_carrosel_2.png" className=" object-cover   w-full h-full " alt="..."/>
-                        </div>
-                        <div id="carousel-item-3" className="object-cover w-full  duration-200 ease-linear" data-carousel-item="active">
-                            <img src="src/assets/event_main_carrosel_3.png" className="  object-cover w-full h-full " alt="..."/>
-                        </div>
-                        <div id="carousel-item-4" className=" object-cover w-full duration-200 ease-linear" data-carousel-item>
-                            <img src="src/assets/BeeGees.jpeg" className="object-cover  w-full h-full " alt="..."/>
-                        </div>
-                    </div>
-                    <button onClick={() => {
-                        praTras();
-                    }} id="carousel-anterior" type="button" className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 1 1 5l4 4"/>
+                <Carousel id="controls-carousel"
+                    transition={{duration: 2}}
+                    className="rounded-xl w-1/2 h-full overflow-clip"
+                    prevArrow={() => (
+                        <IconButton
+                            variant="text"
+                            color="white"
+                            size="lg"
+                            onClick={() =>{
+                                praTras();
+                            }}
+                            className="!absolute top-2/4 left-4 -translate-y-2/4"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="h-6 w-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                                />
                             </svg>
-                            <span className="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button onClick={() => {
-                        praFrente();
-                    }} id="carousel-proximo" type="button" className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg className="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                        </IconButton>
+                    )}
+                    nextArrow={() => (
+                        <IconButton
+                            variant="text"
+                            color="white"
+                            size="lg"
+                            onClick={() =>{
+                                praFrente();
+                            }}
+                            className="!absolute top-2/4 !right-4 -translate-y-2/4"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={2}
+                                stroke="currentColor"
+                                className="h-6 w-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                />
                             </svg>
-                            <span className="sr-only">Next</span>
-                        </span>
-                    </button>
-                </div>
+                        </IconButton>
+                    )}
+                >
+                    <img
+                        src="src/assets/event_main_carrosel_1.png"
+                        alt="image 1"
+                        className=" absolute block object-cover w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    />
+                    <img
+                        src="src/assets/event_main_carrosel_2.png"
+                        alt="image 2"
+                        className=" absolute block object-cover w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    />
+                    <img
+                        src="src/assets/event_main_carrosel_3.png"
+                        alt="image 3"
+                        className=" absolute block object-cover w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    />
+                    <img
+                        src="src/assets/BeeGees.jpeg"
+                        alt="image 4"
+                        className=" absolute block object-cover w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                    />
+                </Carousel>
+
             </div>
         </section>
     )
