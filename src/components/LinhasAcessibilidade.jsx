@@ -24,3 +24,4 @@ export function LinhasAcessibilidade(){
         </div>
     )
 }
+export default LinhasAcessibilidade
