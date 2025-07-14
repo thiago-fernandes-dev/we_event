@@ -12,9 +12,9 @@ export function LinhasAcessibilidade(){
                 <div className="w-5/6" ></div>
                 <nav className="inline-flex space-x-1">
                     <ul className="inline-flex space-x-3">
-                        <li><a href="#" className="bg-white hover:bg-gray-100 text-black-600  py-0.5 px-1  rounded">Busca[1]</a></li>
-                        <li><a href="#" className="bg-white hover:bg-gray-100 text-black-600  py-0.5 px-1  rounded">Conteúdo[2]</a></li>
-                        <li><a href="#" className="bg-white hover:bg-gray-100 text-black-600  py-0.5 px-1  rounded">Rodapé[3]</a></li>
+                        <li><a href="#" className="bg-white hover:bg-gray-100 text-black-600  py-0.5 px-1  rounded hidden md:inline">Busca[1]</a></li>
+                        <li><a href="#" className="bg-white hover:bg-gray-100 text-black-600  py-0.5 px-1  rounded hidden md:inline">Conteúdo[2]</a></li>
+                        <li><a href="#" className="bg-white hover:bg-gray-100 text-black-600  py-0.5 px-1  rounded hidden md:inline">Rodapé[3]</a></li>
                         <li><a href="#" className="bg-white hover:bg-gray-100 text-black-600  py-0.5 px-1  rounded">Acessibilidade</a></li>
                     </ul>
                 </nav>

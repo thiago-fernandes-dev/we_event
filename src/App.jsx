@@ -11,7 +11,6 @@ function App() {
 
   return (
     <header>
-      <Hamburger/>
       <LinhasAcessibilidade/>
       <ContainerBanner/>
     </header>

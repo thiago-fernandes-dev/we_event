@@ -15,14 +15,14 @@ export function EventosPrincipais(){
     return (
         <section className="inline-flex w-full max-h-1/4 m-0">
             <div className="flex w-full m-0">
-                <div className="inline-flex w-1/2">
+                <div className="hidden md:inline-flex w-1/2">
                     <a href="#" className="w-1/2"><img id="evento1-img" src="src/assets/event_main_1.png" alt="#" className="w-full h-full"/></a>
                     <a href="#" className="w-1/2"><img id="evento2-img" src="src/assets/event_main_2.png" alt="#" className="w-full h-full"/></a>
                 </div>
 
                 <Carousel id="controls-carousel"
                     transition={{duration: 2}}
-                    className="rounded-xl w-1/2 h-full overflow-clip"
+                    className="rounded-xl w-full md:w-1/2 h-full overflow-clip "
                     prevArrow={() => (
                         <IconButton
                             variant="text"
