@@ -49,14 +49,13 @@ function customPagination(_, className) {
 
 export function EventosPrincipais(){
     return (
-        <section className="inline-flex w-full max-h-1/4 m-0">
-            <div className="flex w-full m-0">
-                <div className="inline-flex w-1/2">
-                    <a href="#" className="w-1/2"><img id="evento1-img" src="src/assets/event_main_1.png" alt="#" className="w-full h-full"/></a>
-                    <a href="#" className="w-1/2"><img id="evento2-img" src="src/assets/event_main_2.png" alt="#" className="w-full h-full"/></a>
+        <section className="flex w-full flex-col lg:flex-row">
+                <div className="hidden lg:flex lg:w-1/2">
+                    <a href="#" className="w-1/2"><img id="evento1-img" src="src/assets/event_main_1.png" alt="#" className="w-full h-auto object-cover"/></a>
+                    <a href="#" className="w-1/2"><img id="evento2-img" src="src/assets/event_main_2.png" alt="#" className="w-full h-auto object-cover"/></a>
                 </div>
 
-                <div className="max-w-[686px]">
+                <div className="relative w-full lg:w-1/2 aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2]">
                     <Swiper
                         pagination={{
                             enabled: true,
@@ -69,7 +68,7 @@ export function EventosPrincipais(){
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        className="relative rounded-lg [&_div.swiper-button-next]:text-background [&_div.swiper-button-prev]:text-background"
+                        className="h-full w-full rounded-lg"
                     >
                         {[
                             "src/assets/event_main_carrosel_1.png",
@@ -77,18 +76,17 @@ export function EventosPrincipais(){
                             "src/assets/event_main_carrosel_3.png",
                             "src/assets/BeeGees.jpeg",
                         ].map((img, index) => (
-                            <SwiperSlide key={index} className="select-none">
+                            <SwiperSlide key={index} className="h-full w-full select-none">
                                 <img
                                     src={img}
                                     alt={`image-${index}`}
-                                    className="h-[28rem] w-full object-cover"
+                                    className="h-full w-full object-cover"
                                 />
                             </SwiperSlide>
                         ))}
                         <CustomNavigation />
                     </Swiper>
                 </div>
-            </div>
         </section>
     )
 }
