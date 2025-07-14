@@ -80,7 +80,7 @@ export function EventosPrincipais(){
                                 <img
                                     src={img}
                                     alt={`image-${index}`}
-                                    className="h-full w-full object-cover"
+                                    className="h-[28rem] w-full object-cover object-[100%0%]"
                                 />
                             </SwiperSlide>
                         ))}
