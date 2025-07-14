@@ -29,8 +29,8 @@ export function ContainerMenu(){
                 </form>
 
                 <a href="" className="hidden md:inline content-center"><img src="src/assets/Login.svg" alt="Login "/></a>
-                <a href="" className="hidden md:inline content-center"><img src="src/assets/Favoritos.svg" alt="Seus Favoritos"/></a>
-                <a href="" className="hidden md:inline content-center"><img src="src/assets/Linguagem.svg" alt="Mudar Linguagem"/></a>
+                <a href="" className="hidden lg:inline content-center"><img src="src/assets/Favoritos.svg" alt="Seus Favoritos"/></a>
+                <a href="" className="hidden lg:inline content-center"><img src="src/assets/Linguagem.svg" alt="Mudar Linguagem"/></a>
                 <div className="w-1/28"></div>
             </div>
             <div className="w-full py-1 md:py-3"></div>
