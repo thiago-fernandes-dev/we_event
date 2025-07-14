@@ -1,5 +1,5 @@
 "use client";
-import { Carousel, IconButton } from "@material-tailwind/react";
+import { IconButton } from "@material-tailwind/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
