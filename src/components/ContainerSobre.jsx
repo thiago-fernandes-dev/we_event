@@ -2,7 +2,7 @@ import React from "react";
 
 export function ContainerSobre() {
     return(
-        <section className="flex w-full max-h-1/4 h-1/4 grid-cols-4 py-6 my-10 space-x-33 bg-[#F0F0F0]">
+        <section className="flex w-full max-h-1/4 h-1/4 grid-cols-4 py-6 mt-10 space-x-33 bg-[#F0F0F0]">
             <div className="px-7 max-h-1/4 h-1/4">
                 <h4 className="text-2xl">Sobre a WE EVENT</h4>
                 <ul className="py-3">
