@@ -6,7 +6,7 @@ export function NovosEventos(){
             <div className="w-full flex-wrap">
                 <h2 className=" text-3xl w-full py-6 px-6">Adicionados Recentemente</h2>
             </div>
-            <div className="inline-flex grid-cols-4 w-full h1/3 space-x-40 px-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-full h1/3 px-10 gap-10">
                 <div className="">
                     <div className="card-evento1">
                         <img className="img-evento1" src="src/assets/card1.webp" alt="Evento #"/>
