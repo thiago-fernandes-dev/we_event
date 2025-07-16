@@ -2,17 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import {MainBody} from "./components/MainBody.jsx";
-import { ThemeProvider } from "@material-tailwind/react";
-import {Footers} from "./components/Footers.jsx";
+import React from "react";
+import {BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import {RouterPage} from "./components/RouterPage.jsx";
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-      <ThemeProvider>
-          <App />
-          <MainBody />
-          <Footers/>
-      </ThemeProvider>
+      <BrowserRouter>
+          <App/>
+      </BrowserRouter>
   </StrictMode>,
 )

@@ -16,7 +16,6 @@ function CustomNavigation() {
     return (
         <>
             <IconButton
-                isCircular
                 size="lg"
                 variant="ghost"
                 color="secondary"
@@ -26,7 +25,6 @@ function CustomNavigation() {
                 <NavArrowLeft className="h-7 w-7 -translate-x-0.5 stroke-2" />
             </IconButton>
             <IconButton
-                isCircular
                 size="lg"
                 variant="ghost"
                 color="secondary"
