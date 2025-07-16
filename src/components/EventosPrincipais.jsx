@@ -50,12 +50,12 @@ function customPagination(_, className) {
 export function EventosPrincipais(){
     return (
         <section className="flex w-full flex-col lg:flex-row">
-                <div className="hidden lg:flex lg:w-1/2">
-                    <a href="#" className="w-1/2"><img id="evento1-img" src="src/assets/event_main_1.png" alt="#" className="w-full h-auto object-cover"/></a>
-                    <a href="#" className="w-1/2"><img id="evento2-img" src="src/assets/event_main_2.png" alt="#" className="w-full h-auto object-cover"/></a>
+                <div className="hidden h-[38rem] lg:flex lg:w-1/2">
+                    <a href="#" className="w-1/2"><img id="evento1-img" src="src/assets/event_main_1.png" alt="#" className="w-full h-full object-fill"/></a>
+                    <a href="#" className="w-1/2"><img id="evento2-img" src="src/assets/event_main_2.png" alt="#" className="w-full h-full object-fill"/></a>
                 </div>
 
-                <div className="relative w-full lg:w-1/2 aspect-[16/9] sm:aspect-[4/3] md:aspect-[3/2]">
+                <div className="relative w-full lg:w-1/2 h-120 md:h-180 lg:h-[38rem]">
                     <Swiper
                         pagination={{
                             enabled: true,
@@ -68,7 +68,7 @@ export function EventosPrincipais(){
                             delay: 2500,
                             disableOnInteraction: false,
                         }}
-                        className="h-full w-full rounded-lg"
+                        className="h-full w-full"
                     >
                         {[
                             "src/assets/event_main_carrosel_1.png",
@@ -80,7 +80,7 @@ export function EventosPrincipais(){
                                 <img
                                     src={img}
                                     alt={`image-${index}`}
-                                    className="h-[28rem] w-full object-cover object-[100%0%]"
+                                    className="w-full h-full object-fill object-center"
                                 />
                             </SwiperSlide>
                         ))}

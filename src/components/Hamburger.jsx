@@ -21,14 +21,10 @@ export function Hamburger() {
             </div>
 
             { open && (
-                <div className='bg-[#1E2665] text-white text-sm py-2 space-y-1 w-max ml-auto -mr-9 mt-1'>
-                    <a href="#" className='block px-4'>A+</a>
-                    <a href="#" className='block px-4'>A-</a>
-                    <a href="#" className='block px-4'>Contraste</a>
-                    <a href="#" className='block px-4'>Busca[1]</a>
-                    <a href="#" className='block px-4'>Conteúdo[2]</a>
-                    <a href="#" className='block px-4'>Rodapé[3]</a>
-                    <a href="#" className='block px-4'>Acessibilidade</a>
+                <div className='bg-[#1E2665] flex justify-center text-white text-sm py-2 space-y-1 w-full ml-8 mt-1'>
+                    <a href="#" className='block px-4'><img src="src/assets/Login.svg" alt="Login "/></a>
+                    <a href="#" className='block px-4'><img src="src/assets/Favoritos.svg" alt="Seus Favoritos"/></a>
+                    <a href="#" className='block px-4'><img src="src/assets/Linguagem.svg" alt="Mudar Linguagem"/></a>
                 </div>
             )}   
         </section>
