@@ -1,8 +1,10 @@
 import React from "react";
 import { useCarrier } from "./EventsContainer.jsx";
+import {useNavigate} from "react-router-dom";
 
 export function ContainerMenu(){
     const {images, names, addStrings, addImages} = useCarrier();
+    const navigate = useNavigate();
     console.log(names);
     console.log(images);
 
@@ -12,7 +14,7 @@ export function ContainerMenu(){
         let busca = texto.value;
         texto.value = "";
         //const response = await fetch("https://app.ticketmaster.com/discovery/v2/events?apikey=nYvNppFddmYCde75HwHboWYAhgA68k2F&keyword=S%C3%A3o%20Paulo&locale=*",{
-        const response = await fetch("https://app.ticketmaster.com/discovery/v2/events?apikey=nYvNppFddmYCde75HwHboWYAhgA68k2F&keyword="+busca+"&locale=*",{
+        const response = await fetch("https://app.ticketmaster.com/discovery/v2/events?apikey=1vA55IAi84MprM2iCENhfYOJsgN266rW&keyword="+busca+"&locale=*",{
             //const response = await fetch("https://app.ticketmaster.com/discovery/v2/events/ZFIMVHtnMZ177xfF/images.json?apikey=nYvNppFddmYCde75HwHboWYAhgA68k2F",{
             type: "GET",
             async:true,
@@ -24,12 +26,30 @@ export function ContainerMenu(){
             let newData = await response.json();
             console.log(newData);
             useCarrier.names = newData;
-            const imageResponse = await fetch("https://app.ticketmaster.com/discovery/v2/events/ZFIMVHtnMZ177xfF/images.json?apikey=nYvNppFddmYCde75HwHboWYAhgA68k2F");
-            let newImages = await imageResponse.json();
-            console.log(newImages);
-            useCarrier.images = newImages;
+            let temp = useCarrier.names['_embedded']['events'];
+            for(let n = 0; n < temp.length; n++){
+                let briefResponse = await fetch("https://app.ticketmaster.com/discovery/v2/events/"+temp[n]['id']+"/images.json?apikey=1vA55IAi84MprM2iCENhfYOJsgN266rW", {
+                    type: "GET",
+                    async: true,
+                    dataType: "json",
+                    HTTP: 1.1,
+                    Host: "app.ticketmaster.com",
+                });
+                let newImages = await briefResponse.json();
+                useCarrier.names["ids"+n] = newImages['images'][3]['url']
+                setTimeout(() => {
+                }, 1000);
+            }
+
+            //const imageResponse = await fetch("https://app.ticketmaster.com/discovery/v2/events/ZFIMVHtnMZ177xfF/images.json?apikey=nYvNppFddmYCde75HwHboWYAhgA68k2F");
+
+            //let newImages = await imageResponse.json();
+            //console.log(newImages);
+            //useCarrier.images = newImages;
             //console.log(useCarrier.images['images'][0]['url']);
             //console.log(useCarrier.names['_embedded']['events'][0]['name']+"o id: "+useCarrier.names['_embedded']['events'][0]['id']);
+            console.log(useCarrier.names["ids0"]);
+            navigate('/novos');
         }
     }
 

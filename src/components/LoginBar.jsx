@@ -6,12 +6,12 @@ import {LinhasAcessibilidade} from "./LinhasAcessibilidade.jsx";
 
 export function LoginBar(){
     return(
-        <Fragment>
+        <fragment>
             <Routes>
                 <Route path="/login" element={<Login/>}></Route>
                 <Route path="/cadastro" element={<Cadastro/>}></Route>
                 <Route path="/acessibilidade" element={<LinhasAcessibilidade/>}></Route>
             </Routes>
-        </Fragment>
+        </fragment>
     )
 }
