@@ -50,7 +50,7 @@ export function RefreshPrincipais(){
     const {images, names, addStrings, addImages} = useCarrier();
 
     return (
-        <fragment>
+        <Fragment>
             <section className="inline-flex w-full max-h-1/4 m-0">
                 <div className="flex w-full m-0">
                     <div className="inline-flex w-1/2">
@@ -139,6 +139,6 @@ export function RefreshPrincipais(){
                     </div>
                 </div>
             </section>
-        </fragment>
+        </Fragment>
     )
 }

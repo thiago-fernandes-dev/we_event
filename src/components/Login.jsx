@@ -25,7 +25,7 @@ export function Login() {
           dados = {"email": email, "password": password};
           console.log('Dados enviados',dados);
           setError('');
-          navigate('/acessibilidade');
+          navigate('/');
       }
   }
 
@@ -45,7 +45,7 @@ export function Login() {
     <button type="button" onClick={()=>{
         navigate('/cadastro');
     }} className=" bg-gray-800  text-white border rounded-2xl p-2 self-center w-60 mt-2 hover:bg-gray-700  transition-colors cursor-pointer">Não possui conta? Clique aqui!</button>
-    <button onClick={() =>{navigate('/acessibilidade');}} className= " bg-gray-800  text-white border rounded-2xl p-2 self-center w-50 mt-3 hover:bg-gray-700 transition-colors cursor-pointer" type="submit">Voltar</button>
+    <button onClick={() =>{navigate('/');}} className= " bg-gray-800  text-white border rounded-2xl p-2 self-center w-50 mt-3 hover:bg-gray-700 transition-colors cursor-pointer" type="submit">Voltar</button>
     </form>
   )
 }

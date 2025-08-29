@@ -17,7 +17,7 @@ export function LinhasAcessibilidade(){
                     <button onClick={() =>{
                         const pageLogin = document.getElementById('login-botao-entrar');
                         if(pageLogin){
-                            navigate('/acessibilidade');
+                            navigate('/');
                         }else{
                             navigate('/login');
                         }
